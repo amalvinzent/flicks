@@ -23,7 +23,7 @@ export const MovieCard = ({ movie }: MovieCardProps) => {
         contentFit="cover"
         transition={300}
         cachePolicy="memory-disk"
-        placeholder={require('../assets/placeholder.png')}
+        placeholder={require('../assets/images/placeholder.png')}
       />
       <View style={styles.movieInfo}>
         <Text
