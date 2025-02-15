@@ -26,6 +26,9 @@ export const fetchFromAPI = async (endpoint: string) => {
 }
 
 export const movieAPI = {
-  getNowPlaying: () => fetchFromAPI('/movie/now_playing'),
-  getMovieDetails: (movieId: number) => fetchFromAPI(`/movie/${movieId}`)
+  getNowPlaying: () => fetchFromAPI('now_playing'),
+  getPopular: () => fetchFromAPI('popular'),
+  getTopRated: () => fetchFromAPI('top_rated'),
+  getUpcoming: () => fetchFromAPI('upcoming'),
+  getMovieDetails: (movieId: number) => fetchFromAPI(`/${movieId}`)
 }
