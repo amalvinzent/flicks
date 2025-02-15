@@ -1,50 +1,48 @@
-# Welcome to your Expo app 👋
+# Flicks
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+## How to Run the App
 
-## Get started
+### 1. Clone the Repository
 
-1. Install dependencies
-
-   ```bash
-   npm install
-   ```
-
-2. Start the app
-
-   ```bash
-    npx expo start
-   ```
-
-In the output, you'll find options to open the app in a
-
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
-
-```bash
-npm run reset-project
+```sh
+git clone https://github.com/amalvinzent/flicks.git
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+### 2. Navigate to the Project Folder
 
-## Learn more
+```sh
+cd flicks
+```
 
-To learn more about developing your project with Expo, look at the following resources:
+### 3. Install Dependencies
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+```sh
+npm install
+```
 
-## Join the community
+### 4. Start the App
 
-Join our community of developers creating universal apps.
+```sh
+npx expo start
+```
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+## Viewing the App
+
+### a) On Mobile
+
+1. Download **Expo Go** from the Play Store:  
+   [Download Expo Go](https://play.google.com/store/apps/details?id=host.exp.exponent&hl=en_IN)
+2. Open the Expo Go app and scan the QR code displayed in the terminal.
+3. The app will launch on your mobile device.
+
+### b) In the Browser
+
+Press **'w'** on your keyboard to open the app in a web browser.
+
+## Running Tests
+
+To run tests, navigate to the project folder and execute:
+
+```sh
+npm test
+```
