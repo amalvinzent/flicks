@@ -6,7 +6,13 @@ export default function TabLayout() {
       <Tabs.Screen
         name="index"
         options={{
-          title: '',
+          href: null 
+        }}
+      />
+      <Tabs.Screen
+        name="now_playing"
+        options={{
+          title: 'Now Playing',
           headerShown: false
         }}
       />
