@@ -4,38 +4,39 @@
     "slug": "flicks",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "",
+    "icon": "./assets/icon.png",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#212121"
+    },
     "scheme": "myapp",
     "userInterfaceStyle": "dark",
     "newArchEnabled": true,
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "icon": "./assets/icon.png"
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "",
-        "backgroundColor": "#121212"
-      }
+        "foregroundImage": "./assets/icon.png",
+        "backgroundColor": "#212121"
+      },
+      "package": "com.flicks.app",
+      "versionCode": 1
     },
     "web": {
       "bundler": "metro",
       "output": "static",
-      "favicon": ""
+      "favicon": "./assets/icon.png"
     },
-    "plugins": [
-      "expo-router",
-      [
-        "expo-splash-screen",
-        {
-          "image": "",
-          "imageWidth": 200,
-          "resizeMode": "contain",
-          "backgroundColor": "#121212"
-        }
-      ]
-    ],
+    "plugins": ["expo-router"],
     "experiments": {
       "typedRoutes": true
+    },
+    "development": {
+      "developmentClient": true,
+      "distribution": "internal"
     }
   }
 }
