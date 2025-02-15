@@ -5,4 +5,7 @@ export type Movie = {
   overview: string
   poster_path: string
   vote_average: number
+  runtime?: number
+  genres?: Array<{ id: number; name: string }>
+  tagline?: string
 }

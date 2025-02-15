@@ -13,7 +13,7 @@ import { Movie } from '../../types/movie'
 import { LoadingOverlay } from '../../components/LoadingOverlay'
 import { ErrorMessage } from '../../components/ErrorMessage'
 
-export default function NowPlaying() {
+export default function TopRated() {
   const [movies, setMovies] = useState<Movie[]>([])
   const [isLoading, setIsLoading] = useState(true)
   const [error, setError] = useState(false)
@@ -25,7 +25,7 @@ export default function NowPlaying() {
     const fetchMovies = async () => {
       try {
         setIsLoading(true)
-        const data = await movieAPI.getNowPlaying()
+        const data = await movieAPI.getTopRated()
         setMovies(data.results)
       } catch (error) {
         setError(true)
@@ -52,7 +52,7 @@ export default function NowPlaying() {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Now Playing</Text>
+      <Text style={styles.title}>Top Rated</Text>
       <FlatList
         data={movies}
         renderItem={renderMovie}

@@ -30,5 +30,5 @@ export const movieAPI = {
   getPopular: () => fetchFromAPI('popular'),
   getTopRated: () => fetchFromAPI('top_rated'),
   getUpcoming: () => fetchFromAPI('upcoming'),
-  getMovieDetails: (movieId: number) => fetchFromAPI(`/${movieId}`)
+  getMovieDetails: (movieId: number) => fetchFromAPI(`${movieId}`)
 }

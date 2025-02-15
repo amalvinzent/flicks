@@ -1,5 +1,6 @@
-import { View, Text, StyleSheet } from 'react-native'
+import { View, Text, StyleSheet, Pressable } from 'react-native'
 import { Image } from 'expo-image'
+import { Link } from 'expo-router'
 import { theme } from '../constants/theme'
 import { Movie } from '../types/movie'
 import { useResponsive } from '../hooks/useResponsive'
@@ -12,34 +13,36 @@ export const MovieCard = ({ movie }: MovieCardProps) => {
   const { isTablet } = useResponsive()
 
   return (
-    <View style={styles.movieCard}>
-      <Image
-        source={{
-          uri: isTablet
-            ? `https://image.tmdb.org/t/p/w780${movie.poster_path}`
-            : `https://image.tmdb.org/t/p/w500${movie.poster_path}`
-        }}
-        style={[styles.poster, { height: isTablet ? 400 : 300 }]}
-        contentFit="cover"
-        transition={300}
-        cachePolicy="memory-disk"
-        placeholder={require('../assets/images/placeholder.png')}
-      />
-      <View style={styles.movieInfo}>
-        <Text
-          style={[styles.movieTitle, isTablet && styles.tabletTitle]}
-          numberOfLines={2}
-        >
-          {movie.title}
-        </Text>
-        <Text style={[styles.releaseDate, isTablet && styles.tabletText]}>
-          {movie.release_date}
-        </Text>
-        <Text style={[styles.rating, isTablet && styles.tabletText]}>
-          ⭐️ {movie.vote_average.toFixed(1)}
-        </Text>
-      </View>
-    </View>
+    <Link href={`/movie/${movie.id}`} asChild>
+      <Pressable style={styles.movieCard}>
+        <Image
+          source={{
+            uri: isTablet
+              ? `https://image.tmdb.org/t/p/w780${movie.poster_path}`
+              : `https://image.tmdb.org/t/p/w500${movie.poster_path}`
+          }}
+          style={[styles.poster, { height: isTablet ? 400 : 300 }]}
+          contentFit="cover"
+          transition={300}
+          cachePolicy="memory-disk"
+          placeholder={require('../assets/images/placeholder.png')}
+        />
+        <View style={styles.movieInfo}>
+          <Text
+            style={[styles.movieTitle, isTablet && styles.tabletTitle]}
+            numberOfLines={2}
+          >
+            {movie.title}
+          </Text>
+          <Text style={[styles.releaseDate, isTablet && styles.tabletText]}>
+            {movie.release_date}
+          </Text>
+          <Text style={[styles.rating, isTablet && styles.tabletText]}>
+            ⭐️ {movie.vote_average.toFixed(1)}
+          </Text>
+        </View>
+      </Pressable>
+    </Link>
   )
 }
 
@@ -56,7 +59,7 @@ const styles = StyleSheet.create({
     width: '100%'
   },
   movieInfo: {
-    padding: theme.spacing.sm
+    padding: theme.spacing.md
   },
   movieTitle: {
     fontFamily: 'Poppins_700Bold',
@@ -81,7 +84,6 @@ const styles = StyleSheet.create({
     borderRadius: theme.borderRadius.sm,
     alignSelf: 'flex-start'
   },
-
   tabletTitle: {
     fontSize: 18
   },
