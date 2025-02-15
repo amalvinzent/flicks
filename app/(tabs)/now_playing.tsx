@@ -1,20 +1,6 @@
 import { View, Text, StyleSheet } from 'react-native'
-import {
-  useFonts,
-  Poppins_400Regular,
-  Poppins_700Bold
-} from '@expo-google-fonts/poppins'
 
 export default function NowPlaying() {
-  const [fontsLoaded] = useFonts({
-    Poppins_400Regular,
-    Poppins_700Bold
-  })
-
-  if (!fontsLoaded) {
-    return null
-  }
-
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Welcome to Flicks</Text>
@@ -30,6 +16,6 @@ const styles = StyleSheet.create({
   },
   title: {
     fontFamily: 'Poppins_400Regular',
-    fontSize: 24
+    fontSize: 20
   }
 })
