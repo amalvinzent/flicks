@@ -17,10 +17,12 @@ export const fetchFromAPI = async (endpoint: string) => {
     const response = await fetch(
       `${config.baseURL}/${endpoint}?api_key=${config.apiKey}`
     )
+    if (!response.ok) {
+      throw new Error('API request failed')
+    }
     const data = await response.json()
     return data
   } catch (error) {
-    console.error('API Error:', error)
     throw error
   }
 }
