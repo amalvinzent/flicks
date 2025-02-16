@@ -46,3 +46,9 @@ To run tests, navigate to the project folder and execute:
 ```sh
 npm test
 ```
+
+## Download APK
+
+Click the link below to download APK:
+
+[![Download APK](https://img.shields.io/badge/Download-APK-blue?style=for-the-badge&logo=android)](https://expo.dev/artifacts/eas/qnkZ7f7Wmp6fU42vqE44XL.apk)
