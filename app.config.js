@@ -8,8 +8,13 @@ export default {
       }
     },
     icon: './assets/images/icon.png',
+    splash: {
+      image: './assets/images/splash-icon.png',
+      resizeMode: 'contain',
+      backgroundColor: '#1c1c1c'
+    },
     android: {
-      package: 'com.flicks.app',
+      package: 'com.flicks.app'
     },
     ios: {
       bundleIdentifier: 'com.flicks.app',

@@ -18,7 +18,6 @@ export default function TabLayout() {
         tabBarStyle: {
           backgroundColor: theme.colors.background,
           height: theme.spacing.xl * 2,
-          backdropFilter: 'blur(25px)',
           borderTopWidth: 0.2,
           borderTopColor: 'rgba(255, 255, 255, 0.1)'
         },
@@ -28,8 +27,7 @@ export default function TabLayout() {
           fontFamily: 'Poppins_400Regular',
           fontSize: 11,
           paddingBottom: theme.spacing.sm
-        },
-        animation: 'fade'
+        }
       }}
     >
       <Tabs.Screen

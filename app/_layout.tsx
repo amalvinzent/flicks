@@ -9,6 +9,7 @@ import { useCallback } from 'react'
 import { Platform, View } from 'react-native'
 import { StatusBar } from 'expo-status-bar'
 import Toast from 'react-native-toast-message'
+import { theme } from '@/constants/theme'
 
 SplashScreen.preventAutoHideAsync()
 
@@ -29,9 +30,27 @@ export default function RootLayout() {
   }
 
   return (
-    <View style={{ flex: 1 }} onLayout={onLayoutRootView}>
+    <View
+      style={{ flex: 1, backgroundColor: theme.colors.background }}
+      onLayout={onLayoutRootView}
+    >
       <StatusBar style="light" translucent backgroundColor="transparent" />
-      <Stack>
+      <Stack
+        screenOptions={{
+          contentStyle: {
+            backgroundColor: '#000'
+          },
+          headerStyle: {
+            backgroundColor: 'transparent'
+          },
+          headerTransparent: true,
+          animation: Platform.OS === 'android' ? 'fade_from_bottom' : 'default',
+          presentation: 'card',
+          animationDuration: 200,
+          gestureEnabled: true,
+          gestureDirection: 'horizontal'
+        }}
+      >
         <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
         <Stack.Screen
           name="movie/[id]"
@@ -41,11 +60,7 @@ export default function RootLayout() {
             headerTintColor: '#fff',
             headerBackVisible: true,
             headerTransparent: true,
-            animation: Platform.OS === 'android' ? 'flip' : 'default',
-            animationDuration: 200,
-            presentation: 'card',
-            gestureEnabled: true,
-            gestureDirection: 'horizontal'
+            animation: 'none'
           }}
         />
       </Stack>
