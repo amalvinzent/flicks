@@ -36,7 +36,7 @@ export default function TabLayout() {
         tabBarInactiveTintColor: theme.colors.textSecondary,
         tabBarLabelStyle: {
           fontFamily: 'Poppins_400Regular',
-          fontSize: 12,
+          fontSize: 10,
           paddingBottom: theme.spacing.sm
         },
         animation: 'fade'
@@ -57,7 +57,7 @@ export default function TabLayout() {
           tabBarIcon: ({ color, focused }) => (
             <MaterialIcons
               name="local-movies"
-              size={24}
+              size={20}
               color={color}
               style={{ transform: [{ scale: focused ? 1.2 : 1 }] }}
             />
@@ -72,7 +72,7 @@ export default function TabLayout() {
           tabBarIcon: ({ color, focused }) => (
             <MaterialIcons
               name="trending-up"
-              size={24}
+              size={20}
               color={color}
               style={{ transform: [{ scale: focused ? 1.2 : 1 }] }}
             />
@@ -87,7 +87,7 @@ export default function TabLayout() {
           tabBarIcon: ({ color, focused }) => (
             <MaterialIcons
               name="star"
-              size={24}
+              size={20}
               color={color}
               style={{ transform: [{ scale: focused ? 1.2 : 1 }] }}
             />
@@ -102,7 +102,7 @@ export default function TabLayout() {
           tabBarIcon: ({ color, focused }) => (
             <MaterialIcons
               name="schedule"
-              size={24}
+              size={20}
               color={color}
               style={{ transform: [{ scale: focused ? 1.2 : 1 }] }}
             />

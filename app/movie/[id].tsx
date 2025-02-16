@@ -49,7 +49,7 @@ export default function MovieDetails() {
             ? `https://image.tmdb.org/t/p/w1280${movie.poster_path}`
             : `https://image.tmdb.org/t/p/w780${movie.poster_path}`
         }}
-        style={[styles.poster, { height: isTablet ? 600 : 550 }]}
+        style={[styles.poster, { height: isTablet ? 700 : 500 }]}
         contentFit="cover"
         transition={300}
         placeholder={require('../../assets/images/placeholder.png')}

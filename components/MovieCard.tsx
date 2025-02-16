@@ -21,7 +21,7 @@ export const MovieCard = ({ movie }: MovieCardProps) => {
               ? `https://image.tmdb.org/t/p/w780${movie.poster_path}`
               : `https://image.tmdb.org/t/p/w500${movie.poster_path}`
           }}
-          style={[styles.poster, { height: isTablet ? 400 : 300 }]}
+          style={[styles.poster, { height: isTablet ? 300 : 200 }]}
           contentFit="cover"
           transition={300}
           cachePolicy="memory-disk"
