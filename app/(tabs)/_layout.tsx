@@ -16,7 +16,7 @@ export default function TabLayout() {
     <Tabs
       screenOptions={{
         tabBarStyle: {
-          backgroundColor: 'rgba(10, 10, 10, 0.95)',
+          backgroundColor: theme.colors.background,
           height: theme.spacing.xl * 2.5,
           paddingBottom: theme.spacing.md,
           paddingTop: theme.spacing.sm,
