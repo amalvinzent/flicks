@@ -98,7 +98,7 @@ const styles = StyleSheet.create({
     fontFamily: 'Poppins_400Regular',
     fontSize: 14,
     color: theme.colors.textSecondary,
-    backgroundColor: `${theme.colors.primary}15`,
+    backgroundColor: `${theme.colors.textSecondary}15`,
     paddingHorizontal: theme.spacing.sm,
     paddingVertical: theme.spacing.xs,
     borderRadius: theme.borderRadius.sm

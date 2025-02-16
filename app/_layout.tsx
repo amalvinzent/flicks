@@ -42,7 +42,7 @@ export default function RootLayout() {
             headerBackVisible: true,
             headerTransparent: true,
             animation: Platform.OS === 'android' ? 'flip' : 'default',
-            animationDuration: 500,
+            animationDuration: 200,
             presentation: 'card',
             gestureEnabled: true,
             gestureDirection: 'horizontal'
