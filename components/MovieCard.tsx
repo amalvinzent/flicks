@@ -28,15 +28,17 @@ export const MovieCard = ({ movie }: MovieCardProps) => {
           placeholder={require('../assets/images/placeholder.png')}
         />
         <View style={styles.movieInfo}>
-          <Text
-            style={[styles.movieTitle, isTablet && styles.tabletTitle]}
-            numberOfLines={2}
-          >
-            {movie.title}
-          </Text>
-          <Text style={[styles.releaseDate, isTablet && styles.tabletText]}>
-            {movie.release_date}
-          </Text>
+          <View style={styles.movieInfoLeft}>
+            <Text
+              style={[styles.movieTitle, isTablet && styles.tabletTitle]}
+              numberOfLines={2}
+            >
+              {movie.title}
+            </Text>
+            <Text style={[styles.releaseDate, isTablet && styles.tabletText]}>
+              {movie.release_date}
+            </Text>
+          </View>
           <Text style={[styles.rating, isTablet && styles.tabletText]}>
             ⭐️ {movie.vote_average.toFixed(1)}
           </Text>
@@ -59,7 +61,14 @@ const styles = StyleSheet.create({
     width: '100%'
   },
   movieInfo: {
-    padding: theme.spacing.md
+    padding: theme.spacing.md,
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'flex-start'
+  },
+  movieInfoLeft: {
+    flex: 1,
+    marginRight: theme.spacing.sm
   },
   movieTitle: {
     fontFamily: 'Poppins_700Bold',
@@ -78,7 +87,7 @@ const styles = StyleSheet.create({
     fontFamily: 'Poppins_400Regular',
     fontSize: 14,
     color: theme.colors.textSecondary,
-    backgroundColor: `${theme.colors.primary}15`,
+    backgroundColor: `${theme.colors.textSecondary}15`,
     paddingHorizontal: theme.spacing.sm,
     paddingVertical: theme.spacing.xs,
     borderRadius: theme.borderRadius.sm,

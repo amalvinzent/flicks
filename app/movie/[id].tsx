@@ -91,12 +91,12 @@ const styles = StyleSheet.create({
   },
   releaseDate: {
     fontFamily: 'Poppins_400Regular',
-    fontSize: 16,
+    fontSize: 14,
     color: theme.colors.textSecondary
   },
   rating: {
     fontFamily: 'Poppins_400Regular',
-    fontSize: 16,
+    fontSize: 14,
     color: theme.colors.textSecondary,
     backgroundColor: `${theme.colors.primary}15`,
     paddingHorizontal: theme.spacing.sm,
