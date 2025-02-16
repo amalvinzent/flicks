@@ -14,9 +14,15 @@ const config: ApiConfig = {
 
 export const fetchFromAPI = async (endpoint: string) => {
   try {
+    const controller = new AbortController()
+    const timeoutId = setTimeout(() => controller.abort(), 60000)
     const response = await fetch(
-      `${config.baseURL}/${endpoint}?api_key=${config.apiKey}`
+      `${config.baseURL}/${endpoint}?api_key=${config.apiKey}`,
+      {
+        signal: controller.signal
+      }
     )
+    clearTimeout(timeoutId)
     if (!response.ok) {
       throw new Error('API request failed')
     }

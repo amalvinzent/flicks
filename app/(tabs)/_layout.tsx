@@ -17,26 +17,16 @@ export default function TabLayout() {
       screenOptions={{
         tabBarStyle: {
           backgroundColor: theme.colors.background,
-          height: theme.spacing.xl * 2.5,
-          paddingBottom: theme.spacing.md,
-          paddingTop: theme.spacing.sm,
+          height: theme.spacing.xl * 2,
           backdropFilter: 'blur(25px)',
-          borderTopWidth: 0.5,
-          borderTopColor: 'rgba(255, 255, 255, 0.1)',
-          shadowColor: '#000',
-          shadowOffset: {
-            width: 0,
-            height: -2
-          },
-          shadowOpacity: 0.1,
-          shadowRadius: 3,
-          elevation: 5
+          borderTopWidth: 0.2,
+          borderTopColor: 'rgba(255, 255, 255, 0.1)'
         },
         tabBarActiveTintColor: theme.colors.text,
         tabBarInactiveTintColor: theme.colors.textSecondary,
         tabBarLabelStyle: {
           fontFamily: 'Poppins_400Regular',
-          fontSize: 10,
+          fontSize: 11,
           paddingBottom: theme.spacing.sm
         },
         animation: 'fade'
@@ -57,7 +47,7 @@ export default function TabLayout() {
           tabBarIcon: ({ color, focused }) => (
             <MaterialIcons
               name="local-movies"
-              size={20}
+              size={18}
               color={color}
               style={{ transform: [{ scale: focused ? 1.2 : 1 }] }}
             />
@@ -72,7 +62,7 @@ export default function TabLayout() {
           tabBarIcon: ({ color, focused }) => (
             <MaterialIcons
               name="trending-up"
-              size={20}
+              size={18}
               color={color}
               style={{ transform: [{ scale: focused ? 1.2 : 1 }] }}
             />
@@ -87,7 +77,7 @@ export default function TabLayout() {
           tabBarIcon: ({ color, focused }) => (
             <MaterialIcons
               name="star"
-              size={20}
+              size={18}
               color={color}
               style={{ transform: [{ scale: focused ? 1.2 : 1 }] }}
             />
@@ -102,7 +92,7 @@ export default function TabLayout() {
           tabBarIcon: ({ color, focused }) => (
             <MaterialIcons
               name="schedule"
-              size={20}
+              size={18}
               color={color}
               style={{ transform: [{ scale: focused ? 1.2 : 1 }] }}
             />
