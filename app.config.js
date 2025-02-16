@@ -9,6 +9,9 @@ export default {
     },
     android: {
       package: 'com.flicks.app'
+    },
+    ios: {
+      bundleIdentifier: 'com.flicks.app'
     }
   }
 }
